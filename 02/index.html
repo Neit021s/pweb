@@ -25,6 +25,12 @@
             texto = prompt('Digite um texto qualquer');
             document.getElementById("minhadiv2").innerHTML = texto;
         }
+        function desafio1(){
+            texto = prompt('Digite um número');
+            document.getElementById("desafio2").innerHTML = texto;
+
+            
+        }
     </script>
 </head>
 <body>
@@ -46,5 +52,11 @@
     <h1>Escrevendo no Texto Dinâmico</h1>
     <button onclick="escrevediv2()">Escrever</button><br></br>
     <div id="minhadiv2"></div>
+    <hr>
 
+    <h1>Desafio</h1>
+    <button onclick="desafio1()">Escreva um numero</button><br></br>
+    <div id="desafio2"></div>
+
+</body>
 </html>
