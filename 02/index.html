@@ -14,8 +14,7 @@
 
             alert(msg);
         }
-        function escreve(arg)
-        {
+        function escreve(arg){
             document.write(arg)
         }
         function escrevediv(texto){
@@ -27,7 +26,12 @@
         }
         function desafio1(){
         num = prompt('Digite um número');
-        document.getElementById("desafio2").innerHTML = num;
+            seq = 0
+            while not(seq = num){
+                seq += 1
+                document.getElementById("desafio2").innerHTML = seq;
+            }
+         
             
         }
     </script>
