@@ -18,6 +18,9 @@
         {
             document.write(arg)
         }
+        function escrevediv(texto){
+            document.getElementById("minhadiv").innerHTML = texto;
+        }
     </script>
 </head>
 <body>
@@ -29,6 +32,9 @@
     <br><br>
     <button onclick="minhafuncao(49)">Raiz de 49 </button>
     <br><br>
-
+    <hr>
+    <h1>Escrevendo Na Div</h1>
+    <button onclick="escrevediv('<h1>Programação web</h1>')">Escrever</button><br></br>
+    
 
 </html>
