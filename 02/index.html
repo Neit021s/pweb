@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript</title>
+
+    <script type="text/javascript">
+        function minhafuncao(arg)
+        {
+            var raiz = Math.sqrt(arg);
+
+            var msg = 'A raiz de: '+ arg +' é '+ raiz;
+
+            alert(msg);
+        }
+        function escreve(arg)
+        {
+            document.write(arg)
+        }
+    </script>
 </head>
 <body>
-    <h1>Arquivo é todo seu! Boa sorte varão!</h1>
-</body>
+    <h1>Java Script</h1>
+    <hr>
+    <button onclick="minhafuncao(25)">Clique</button>
+    <br><br>
+    <button onclick="minhafuncao(36)">Clique</button>
+    <br><br>
+    <button onclick="minhafuncao(49)">Clique</button>
+    <br><br>
+
+
 </html>
