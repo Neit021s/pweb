@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,8 +32,12 @@
         function posicaoLinguagens(){
 
             var indice = prompt('Qual posição da lista deseja consultar?')
-
-            alert(linguagens[indice]);
+            if (indice < 7) {
+                alert(linguagens[indice]);
+            }
+                else {
+                alert("Não tem essa posição")
+            }
         }
 
         
@@ -62,8 +66,12 @@
         function posicaoFrutas(){
 
             var indice = prompt('Qual posição da lista deseja consultar?')
-
+            if (indice <7) {
             alert(frutas[indice]);
+            }
+            else{
+                alert("Não tem essa posição")
+            }
         }
 
     </script>
