@@ -18,8 +18,8 @@
         }
         function adicionar(){
             var nome = prompt('Qual o nome do indivíduo?');
-            nome = String(nome)
-            if (nome = Number || nome == " ") {
+            nome = String(nome);
+            if (nome.length == 0 || !isNaN(nome)) {
                 alert("Por favor, insira um nome válido!");
                 return;
             }
@@ -31,11 +31,11 @@
         function posicao() {
             var indice = prompt('Qual a posição da lista que desejas consultar?')
             indice = Number(indice);
-            if (indice < 0 || indice >= pilhaPessoas.length) {
+            if (indice < 0 || indice >= pilhaPessoas.length || isNaN(indice)) {
                 alert ('Posição inválida');
                 return
             }
-            alert('Na posição' + indice+ ' está: ' +pilhaPessoas[indice] );
+            alert('Na posição ' + indice+ ' está: ' +pilhaPessoas[indice] );
         }
         function remover() {
             if (pilhaPessoas.length === 0) {
@@ -47,11 +47,18 @@
             }
         }
         function limparLista(){
-            pilhaPessoas = [];
-            mostrarLista();
+            if (pilhaPessoas.length === 0) {
+                alert('Não há nada para ser apagado!');
+            } 
+            else {
+                pilhaPessoas = [];
+                alert('Agora a lista está vazia!');
+                mostrarLista();
+            }
         }
-        function inverterPilha() {
-            pilhaPessoas.s
+        function inverterLista() {
+            pilhaPessoas.reverse();
+            mostrarLista();
         }
     </script>
 </head>
@@ -60,7 +67,9 @@
     <button onclick="adicionar()">Adicionar Pessoas</button>
     <button onclick="posicao()">Posição</button>
     <button onclick="remover()">Remover</button>
-    <button onclick="limparLista()">Limpar</button> <br><br>
+    <button onclick="limparLista()">Limpar</button> 
+    <button onclick="inverterLista()">Inverter</button>
+    <br><br>
 
     <div id="minhaDiv"></div>
 
