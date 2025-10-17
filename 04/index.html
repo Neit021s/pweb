@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+    <script>
+        let pilhaPessoas = Array();
+
+        function mostrarLista(){
+            const container = document.getElementById('minhaDiv');
+            container.innerHTML = '';
+
+                for (var i = 0; i < pilhaPessoas.length; i++){
+                    var tag = '<h5>' + i + ' - ' + pilhaPessoas[i] + '</h5>';
+                    container.innerHTML += tag;
+                }
+        }
+        function adicionar(){
+            var nome = prompt('Qual o nome do indivíduo?');
+            nome = String(nome)
+            if (nome = Number || nome == " ") {
+                alert("Por favor, insira um nome válido!");
+                return;
+            }
+            else{
+            pilhaPessoas.push(nome);
+            mostrarLista();
+            }
+        }
+        function posicao() {
+            var indice = prompt('Qual a posição da lista que desejas consultar?')
+            indice = Number(indice);
+            if (indice < 0 || indice >= pilhaPessoas.length) {
+                alert ('Posição inválida');
+                return
+            }
+            alert('Na posição' + indice+ ' está: ' +pilhaPessoas[indice] );
+        }
+        function remover() {
+            if (pilhaPessoas.length === 0) {
+                alert('A pilha está vazia!');
+            } else {
+                let removido = pilhaPessoas.pop();
+                alert('Removido: ' + removido );
+                mostrarLista();
+            }
+        }
+        function limparLista(){
+            pilhaPessoas = [];
+            mostrarLista();
+        }
+        function inverterPilha() {
+            pilhaPessoas.s
+        }
+    </script>
+</head>
+<body>
+    <h1>Lista de Pessoas</h1>
+    <button onclick="adicionar()">Adicionar Pessoas</button>
+    <button onclick="posicao()">Posição</button>
+    <button onclick="remover()">Remover</button>
+    <button onclick="limparLista()">Limpar</button> <br><br>
+
+    <div id="minhaDiv"></div>
+
+    <hr>
+
+</body>
+</html>
